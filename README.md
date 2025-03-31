@@ -30,8 +30,13 @@ It contained original FairMOT's swimming pretrained model (resnet18_epoch150.pth
 
 ## Training
 First, move to FairMOT scene detection directory.    
-You can change training parameters at .sh file.    
+You can change training parameters(batch, epoch, etc.) at .sh file.    
 ```
 sh experiments/ft_mot20_resnet18.sh
+```
+
+## Tracking
+```
+python track.py --task mot --val mot15 True -- load_model ./exp/mot/ft_mot20_resnet18/model_last.pth --conf_thres 0.4
 ```
 
