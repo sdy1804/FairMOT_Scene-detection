@@ -28,4 +28,10 @@ To make more dataset, we augmented datasets using changing HSV, brightness, cont
 To infer, you can use this [pretrained model](https://drive.google.com/drive/folders/1OUAETnTg0SkwO5NA7QIU3t3F4I9QIRYI?usp=drive_link).    
 It contained original FairMOT's swimming pretrained model (resnet18_epoch150.pth) and classification FairMOT head pretrained model (FairMOT_classhead_v12.pth).    
 
+## Training
+First, move to FairMOT scene detection directory.    
+You can change training parameters at .sh file.    
+```
+sh experiments/ft_mot20_resnet18.sh
+```
 
