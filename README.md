@@ -37,6 +37,6 @@ sh experiments/ft_mot20_resnet18.sh
 
 ## Tracking
 ```
-python track.py --task mot --val mot15 True -- load_model ./exp/mot/ft_mot20_resnet18/model_last.pth --conf_thres 0.4
+python track.py --task mot --val mot15 True -- load_model ./path/to/trained/model.pth --conf_thres 0.4
 ```
 
