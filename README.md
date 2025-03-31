@@ -2,13 +2,10 @@
 
 ## Introduction
 In swimming competition video, there are some scenes that repeatly occured when swimmers do competition.     
-I classified some scenes - On-block, Diving, Swimming, Turning, Finish.    
-Optimized hyper-parameters were different for each classes, so I utilized these classes.    
+We classified some scenes - On-block, Diving, Swimming, Turning, Finish.    
+Optimized hyper-parameters were different for each classes, so to utilize this we added classification head to FairMOT.    
 After classification head classified scene classes, hyper-parameters are changed by each optimized values for classes.     
-It can increase swimmer tracking persistance and MOTA score.    
-Hyper-parameters can be Position, Velocity for Kalman filter and aspect ratio's weight for cIoU function.    
-I changed IoU function that used in IoU matching stage to cIoU function.    
-cIoU function can consider 
+We increase swimmer tracking persistance and MOTA score maximum 5.2% than before not used classification head.    
 
 Swimming scene detection dataset
 
