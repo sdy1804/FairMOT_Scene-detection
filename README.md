@@ -1,4 +1,5 @@
 # FairMOT-Scene-detection
+![Image](https://github.com/user-attachments/assets/6331f2fc-5f00-4dbe-b6aa-2ea8123537e7)
 
 ## Introduction
 ![Model architecture](./architecture.png)    
