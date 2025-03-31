@@ -17,7 +17,7 @@ conda create -n FairMOT python=3.8
 conda activate FairMOT
 conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=11.0 -c pytorch
 ```
-And please follow [FairMOT](https://github.com/ifzhang/FairMOT)'s installation.    
+And please follow [FairMOT installation](https://github.com/ifzhang/FairMOT?tab=readme-ov-file#installation).    
 
 ## Swimming scene detection dataset
 We trained FairMOT classification head using this [dataset](https://drive.google.com/drive/folders/1hpA_zdLswchUfw2x6N9jMzboc-paiNw-?usp=drive_link).    
@@ -34,9 +34,14 @@ You can change training parameters(batch, epoch, etc.) at .sh file.
 ```
 sh experiments/ft_mot20_resnet18.sh
 ```
+If you delete or add dataset, you should change src/data/SWIM.train.    
+SWIM.train's configuration is in ./src/lib/cfg/SWIM.json.    
+We followed [FairMOT's custom dataset](https://github.com/ifzhang/FairMOT?tab=readme-ov-file#train-on-custom-dataset).    
 
 ## Tracking
+If you want to validate and get demo for tracking, use this command.
 ```
 python track.py --task mot --val mot15 True -- load_model ./path/to/trained/model.pth --conf_thres 0.4
 ```
+You can set validate sequence at ./src/track.py - seqs_str.    
 
